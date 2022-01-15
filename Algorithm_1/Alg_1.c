@@ -88,7 +88,7 @@ int main(int argc, char ** argv)
 // step 4, 
 				do { //while (Num_of_CipherText <= N)
 					Data1 = Data2 = Random64();
-			//#############################################################################################	
+//#############################################################################################	
 					//Encryption 
 					DES_Alg_Enc(&Data1, key);
 					//Encryption when a fault is occurred 
@@ -132,8 +132,6 @@ int main(int argc, char ** argv)
 // step 8       $sk_n[i]    <---   X \oplus \delta_i
 				ctx.rk[Fault.Sbox] = (X ^ ConvertRowCol_to_InputSbox(Fault.row, Fault.col));
 			}     //for Fault.Sbox=0 to 7
-
-
 // step 8
 			Convert_rk_to_subkey(&ctx, Num_ROUNDS);  // Return sk_16
 //step 9
@@ -243,8 +241,7 @@ The average is taken for 100 different sets of random ineffective ciphertexts.
 		fclose(fprt);
 		return 0;
 	}
-
-
+//End
 
 
 
